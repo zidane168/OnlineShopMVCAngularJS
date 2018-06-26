@@ -27,7 +27,7 @@ namespace OnlineShopDemo
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
-            // added by vi.ly
+            // added by zidane
             bundles.Add(new ScriptBundle("~/bundles/angular").Include(
                         "~/Scripts/angular-1.4.9.js",
                         "~/Scripts/angular-route.min-1.4.9.js" ));
