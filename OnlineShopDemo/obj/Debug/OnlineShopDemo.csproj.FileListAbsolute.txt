@@ -90,3 +90,7 @@ E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Web.Http
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\obj\Debug\OnlineShopDemo.csprojResolveAssemblyReference.cache
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\obj\Debug\OnlineShopDemo.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\obj\Debug\OnlineShopDemo.pdb
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\Models.dll
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\EntityFramework.dll
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\Models.pdb
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\EntityFramework.xml
