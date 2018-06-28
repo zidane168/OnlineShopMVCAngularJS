@@ -15,18 +15,24 @@ namespace Models
 
         public AccountModel()
         {
-
+            context = new OnlineShopDbContext();    // must init before call
         }
 
         public bool Login(string username, string password)
         {
-            object[] sqlParams =
+            try
             {
-                new SqlParameter("@UserName", username),
-                new SqlParameter("@Password", password),
-            };
+                object[] sqlParams =
+                {
+                    new SqlParameter("@UserName", username),
+                    new SqlParameter("@Password", password),
+                };
 
-            return context.Database.SqlQuery<bool>("uspAccountLogin @UserName, @Password", sqlParams).SingleOrDefault();
+                return context.Database.SqlQuery<bool>("uspAccountLogin @UserName, @Password", sqlParams).SingleOrDefault();
+            }
+            catch {
+                throw;
+            }
 
         }
     }

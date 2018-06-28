@@ -12,7 +12,7 @@ namespace Models.EF
         {
         }
 
-        public virtual DbSet<Account> Accounts { get; set; }
+        public virtual DbSet<Account> Account { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

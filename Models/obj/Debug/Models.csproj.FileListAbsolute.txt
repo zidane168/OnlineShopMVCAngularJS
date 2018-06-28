@@ -1,0 +1,10 @@
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\bin\Debug\Models.dll.config
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\bin\Debug\Models.dll
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\bin\Debug\Models.pdb
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\bin\Debug\EntityFramework.dll
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\bin\Debug\EntityFramework.SqlServer.dll
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\bin\Debug\EntityFramework.xml
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\bin\Debug\EntityFramework.SqlServer.xml
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\obj\Debug\Models.dll
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\obj\Debug\Models.pdb
