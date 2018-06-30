@@ -76,18 +76,7 @@ app.controller('CategoryController', function ($scope, appService) {
 
             } else {
 
-                $scope.data = event.result;
-
-                //$scope.models.locations = event.result.data; //1.7.0
-                //$scope.models.locations = event.result;     //1.4.0
-
-                //console.log($scope.models.locations[0].LocationName);
-                //console.log($scope.models.locations[1].LocationName);
-                //console.log($scope.models.locations[2].LocationName);
-
-                //if ($scope.models.locations.length > 0) {
-                //    $scope.selectedLocation = $scope.models.locations[0];   //LocationID | LocationName
-                //}
+                $scope.lstCategory = event.result;
             }
         });
     }
