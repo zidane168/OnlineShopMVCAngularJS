@@ -26,13 +26,23 @@
                             <tr>
                                 <th>ID</th>
                                 <th>Name</th>
+                                <th>Alias</th>
                                 <th>Create date</th>
-                                <th>Is Order </th>
-                                <th>Status</th>
+                                <th>Status</th>                                
+                                
                             </tr>
                         </thead>
                         <tbody>
-                            <tr class="odd gradeX">
+
+                            <tr class="center" class="odd gradeX" ng-repeat="item in lstCategory">
+                                <td>{{item.ID}}</td>
+                                <td>{{item.Name}}</td>
+                                <td>{{item.Alias}}</td>
+                                <td>{{item.CreateDate}}</td>
+                                <td>{{item.Status}}</td>
+                            </tr>
+
+                            @*<tr class="odd gradeX">
                                 <td>Trident</td>
                                 <td>Internet Explorer 4.0</td>
                                 <td>Win 95+</td>
@@ -45,7 +55,7 @@
                                 <td>Win 95+</td>
                                 <td class="center">4</td>
                                 <td class="center">X</td>
-                            </tr>
+                            </tr>*@
 
                         </tbody>
                     </table>
@@ -73,17 +83,19 @@
                                 <tr>
                                     <th>ID</th>
                                     <th>Name</th>
+                                    <th>Alias</th>
                                     <th>Create date</th>
-                                    <th>Is Order </th>
                                     <th>Status</th>
+
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="success">
-                                    <td>1</td>
-                                    <td>Mark</td>
-                                    <td>Otto</td>
-                                    <td>moto</td>
+                                <tr ng-class="item.ID % 2 == 0 ? 'success' : 'danger'" ng-repeat="item in lstCategory">  <!-- class=success  -->
+                                    <td>{{item.ID}}</td>
+                                    <td>{{item.Name}}</td>
+                                    <td>{{item.Alias}}</td>
+                                    <td>{{item.CreateDate}}</td>
+                                    <td>{{item.Status}}</td>
                                 </tr>
 
 

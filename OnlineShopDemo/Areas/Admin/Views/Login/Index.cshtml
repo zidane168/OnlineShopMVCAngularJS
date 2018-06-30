@@ -61,8 +61,6 @@
 
                         @using (Html.BeginForm())
                         {
-
-
                             @Html.AntiForgeryToken()    // validate lại cái key ở server và client
 
                             @Html.ValidationSummary(true, null, new { @class = "alert alert-danger"} ) // hiển thị mã lỗi
