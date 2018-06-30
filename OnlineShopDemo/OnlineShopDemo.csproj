@@ -136,6 +136,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
     <Compile Include="Areas\Admin\Code\CustomMembershipProvider.cs" />
+    <Compile Include="Areas\Admin\Controllers\CategoryAPIController.cs" />
     <Compile Include="Areas\Admin\Controllers\CategoryController.cs" />
     <Compile Include="Areas\Admin\Controllers\HomeController.cs" />
     <Compile Include="Areas\Admin\Controllers\LoginController.cs" />
@@ -322,9 +323,8 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="SPA\app.js" />
     <Content Include="SPA\Controller\CategoryController.js" />
-    <Content Include="SPA\Service\apiService.js" />
+    <Content Include="SPA\apiService.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>

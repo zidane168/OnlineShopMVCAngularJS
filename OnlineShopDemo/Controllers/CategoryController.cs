@@ -4,12 +4,18 @@ using System.Web.Mvc;
 using Models;
 using Models.EF;        // remmeber include here
 
-namespace OnlineShopDemo.Areas.Admin.Controllers
+namespace OnlineShopDemo.Controllers
 {
     public class CategoryController : Controller
     {
       
-  
+        [HttpGet()]
+        [ActionName("GetAllCategory")]
+        public IEnumerable<Category> GetAllCategory()
+        {            
+            var category = new CaterogyModel();
+            return category.GetAll();
+        }
 
         // GET: Admin/Category
         public ActionResult Index()
