@@ -8,9 +8,10 @@ namespace OnlineShopDemo.Areas.Admin.Controllers
 {
     public class CategoryController : Controller
     {
+      
         [HttpGet()]
         [ActionName("GetAllCategory")]
-        public List<Category> GetAll()
+        public IEnumerable<Category> GetAllCategory()
         {            
             var category = new CaterogyModel();
             return category.GetAll();
@@ -19,9 +20,12 @@ namespace OnlineShopDemo.Areas.Admin.Controllers
         // GET: Admin/Category
         public ActionResult Index()
         {
-            var category = new CaterogyModel();
-            var model = category.GetAll();
-            return View(model);
+
+            return View();
+
+            //var category = new CaterogyModel();
+            //var model = category.GetAll();
+            //return View(model);
         }
 
         // GET: Admin/Category/Details/5

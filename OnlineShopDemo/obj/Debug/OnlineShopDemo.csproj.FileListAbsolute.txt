@@ -44,7 +44,6 @@ E:\AngularJS\Exercises\OnlineShopDemo\OnlineShopDemo\bin\System.Web.Http.WebHost
 E:\AngularJS\Exercises\OnlineShopDemo\OnlineShopDemo\obj\Debug\OnlineShopDemo.csprojResolveAssemblyReference.cache
 E:\AngularJS\Exercises\OnlineShopDemo\OnlineShopDemo\obj\Debug\OnlineShopDemo.dll
 E:\AngularJS\Exercises\OnlineShopDemo\OnlineShopDemo\obj\Debug\OnlineShopDemo.pdb
-E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\obj\Debug\OnlineShopDemo.csprojResolveAssemblyReference.cache
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\roslyn\csc.exe
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -92,5 +91,6 @@ E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Net.Http
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Web.Http.xml
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Web.Http.WebHost.xml
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\EntityFramework.xml
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\obj\Debug\OnlineShopDemo.csprojResolveAssemblyReference.cache
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\obj\Debug\OnlineShopDemo.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\obj\Debug\OnlineShopDemo.pdb

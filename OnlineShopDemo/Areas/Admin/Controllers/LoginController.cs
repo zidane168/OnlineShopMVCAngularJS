@@ -49,7 +49,7 @@ namespace OnlineShopDemo.Areas.Admin.Controllers
             if (Membership.ValidateUser(model.UserName, model.Password) && ModelState.IsValid)   // login succeed
             {
                 FormsAuthentication.SetAuthCookie(model.UserName, model.RememberMe);
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Index", "Home");   // return Admin/Index/Home
 
             }
             else
@@ -65,7 +65,7 @@ namespace OnlineShopDemo.Areas.Admin.Controllers
         public ActionResult Logout()
         {
             FormsAuthentication.SignOut();  // hủy all cookies
-            return RedirectToAction("Index", "Login");
+            return RedirectToAction("Index", "Login");  // return Admin/Index/Login
         }
     }
 }
