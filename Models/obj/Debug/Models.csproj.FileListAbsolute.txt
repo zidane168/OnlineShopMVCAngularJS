@@ -5,9 +5,9 @@ E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\bin\Debug\EntityFramework.d
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\bin\Debug\EntityFramework.SqlServer.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\bin\Debug\EntityFramework.xml
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\bin\Debug\EntityFramework.SqlServer.xml
-E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\obj\Debug\Models.dll
-E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\obj\Debug\Models.pdb
-E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Lib\Models.dll.config
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Lib\Models.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Lib\Models.pdb
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\obj\Debug\Models.csprojResolveAssemblyReference.cache
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\obj\Debug\Models.dll
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\Models\obj\Debug\Models.pdb

@@ -27,16 +27,11 @@ namespace OnlineShopDemo
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
 
-            // added by zidane
-            bundles.Add(new ScriptBundle("~/bundles/angular").Include(
-                        "~/Scripts/angular-1.4.9.js",
-                        "~/Scripts/angular-route.min-1.4.9.js" ));
-
-
-
-              //<script src="s"> </script>
-              //  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.min.js"> </script>
-              //  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"> </script>
+            //// added by zidane // can't use outside link here
+            //bundles.Add(new ScriptBundle("~/bundles/angularjs1.4.9").Include(
+            //            "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js",
+            //            "https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.4.9/angular-route.min.js",
+            //            "https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular-animate.js"));
         }
     }
 }

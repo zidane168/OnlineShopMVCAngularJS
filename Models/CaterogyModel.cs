@@ -18,7 +18,7 @@ namespace Models
 
         public List<Models.EF.Category> GetAll()
         {
-            var lst = context.Database.SqlQuery<Models.EF.Category>("uspGetCategory").ToList();
+            var lst = context.Database.SqlQuery<Models.EF.Category>("uspGetAllCategory").ToList();
             return lst;
 
         }
