@@ -44,6 +44,7 @@ E:\AngularJS\Exercises\OnlineShopDemo\OnlineShopDemo\bin\System.Web.Http.WebHost
 E:\AngularJS\Exercises\OnlineShopDemo\OnlineShopDemo\obj\Debug\OnlineShopDemo.csprojResolveAssemblyReference.cache
 E:\AngularJS\Exercises\OnlineShopDemo\OnlineShopDemo\obj\Debug\OnlineShopDemo.dll
 E:\AngularJS\Exercises\OnlineShopDemo\OnlineShopDemo\obj\Debug\OnlineShopDemo.pdb
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\obj\Debug\OnlineShopDemo.csprojResolveAssemblyReference.cache
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\roslyn\csc.exe
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -62,6 +63,7 @@ E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\OnlineShopDemo.
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\Antlr3.Runtime.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\Microsoft.Web.Infrastructure.dll
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\Models.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\Newtonsoft.Json.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Net.Http.Formatting.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Web.Helpers.dll
@@ -74,7 +76,9 @@ E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Web.WebP
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Web.WebPages.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Web.WebPages.Razor.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\WebGrease.dll
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\EntityFramework.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\Models.pdb
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Web.Helpers.xml
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Web.Mvc.xml
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Web.Optimization.xml
@@ -87,10 +91,6 @@ E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\Newtonsoft.Json
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Net.Http.Formatting.xml
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Web.Http.xml
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\System.Web.Http.WebHost.xml
-E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\obj\Debug\OnlineShopDemo.csprojResolveAssemblyReference.cache
+E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\EntityFramework.xml
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\obj\Debug\OnlineShopDemo.dll
 E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\obj\Debug\OnlineShopDemo.pdb
-E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\Models.dll
-E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\EntityFramework.dll
-E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\Models.pdb
-E:\AngularJS\Exercises\OnlineShopMVCAngularJS\OnlineShopDemo\bin\EntityFramework.xml
