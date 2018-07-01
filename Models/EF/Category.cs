@@ -1,4 +1,4 @@
-namespace Models.EF
+﻿namespace Models.EF
 {
     using System;
     using System.Collections.Generic;
@@ -6,12 +6,13 @@ namespace Models.EF
     using System.ComponentModel.DataAnnotations.Schema;
     using System.Data.Entity.Spatial;
 
-    [Table("Category")]
+    [Table("Category")]    
     public partial class Category
     {
         public int ID { get; set; }
 
-        [StringLength(50)]
+        [StringLength(50, ErrorMessage = "ký tự tối đa = 50")]        
+        [Required]
         public string Name { get; set; }
 
         [StringLength(50)]

@@ -4,6 +4,7 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
+
 @*<form role="form">
         <div class="form-group has-success">
             <label class="control-label" for="inputSuccess">Input with success</label>
@@ -19,6 +20,8 @@
         </div>
     </form>*@
 
+@model Models.EF.Category
+
 
 <div class="row">
     <div class="col-lg-6">
@@ -28,16 +31,19 @@
             </div>
             <div class="panel-body">
 
-                <form ng-controller="CategoryValidateController" name="myForm" novalidate style="width: 470px;margin: 0 auto;border:medium;margin-top:10%">
+                <form method="post" ng-controller="CategoryValidateController" name="myForm" novalidate style="width: 470px;margin: 0 auto;border:medium;margin-top:10%">
 
                     <fieldset>
 
                         <!-- ProductName -->
                         <div ng-class="myForm.ProductName.$dirty && myForm.ProductName.$invalid ? 'form-group has-error' : 'form-group has-success'">
-                            <label class="control-label" for="ProductName">Product Name: </label>
+                            <label class="control-label" for="ProductName">
+                                @Html.LabelFor(model => model.Name)
+                            </label>
                             <input type="text" class="form-control" id="ProductName" name="ProductName" ng-model="ProductName" required>
                         </div>
                         <p>
+                            @Html.ValidationMessageFor(model => model.Name, null)
                             <span style="color:red" ng-show="myForm.ProductName.$dirty && myForm.ProductName.$invalid">
                                 <span ng-show="myForm.ProductName.$error.required">Product Name is required.</span>
                             </span>
@@ -45,7 +51,9 @@
 
                         <!-- ProductAlias -->
                         <div ng-class="myForm.ProductAlias.$dirty && myForm.ProductAlias.$invalid ? 'form-group has-error' : 'form-group has-success'">
-                            <label class="control-label" for="ProductAlias">Product Alias: </label>
+                            <label class="control-label" for="ProductAlias">
+                                @Html.LabelFor(model => model.Alias)
+                            </label>
                             <input type="text" class="form-control" id="ProductAlias" name="ProductAlias" ng-model="ProductAlias" required>
                         </div>
                         <p>
@@ -66,10 +74,21 @@
                             </span>
                         </p>
 
+                        <!-- Status -->
+                        <div class="form-group">
+                            <label>Status</label>
+                            <select class="form-control" ng-model="Status">
+                                <option >True</option>
+                                <option selected>False</option>
+                            </select>
+                        </div>
 
+                        <!-- Email (not user) -->
+                        <div ng-class="myForm.email.$dirty && myForm.email.$invalid ? 'form-group has-error' : 'form-group has-success'">
+                            <label class="control-label" for="email">Email: </label>
+                            <input type="email" class="form-control" id="email" name="email" ng-model="email" required>
+                        </div>
                         <p>
-                            Student Email:<br>
-                            <input type="email" name="email" ng-model="email" required>
                             <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
                                 <span ng-show="myForm.email.$error.required">Email is required.</span>
                                 <span ng-show="myForm.email.$error.email">Invalid email address.</span>
@@ -77,27 +96,27 @@
                         </p>
 
 
-
+                        <!-- Marks (not user)-->
+                        <div ng-class="myForm.marks.$dirty && myForm.marks.$invalid ? 'form-group has-error' : 'form-group has-success'">
+                            <label class="control-label" for="marks">marks: </label>
+                            <input type="number" class="form-control" id="marks" name="marks" ng-model="marks" required>
+                        </div>
                         <p>
-                            Student Percentage Marks:<br>
-                            <input type="number" name="marks" ng-model="marks" max="100" required>
                             <span style="color:red" ng-show="myForm.marks.$dirty && myForm.marks.$invalid">
-                                <span ng-show="myForm.marks.$error.required">Email is required.</span>
+                                <span ng-show="myForm.marks.$error.required">marks is required.</span>
                                 <span ng-show="myForm.marks.$error.number">Invalid number.</span>
                                 <span ng-show="myForm.marks.$error.max">Max Percentage is 100.</span>
                             </span>
                         </p>
-         
-                        @*<button type="button" class="btn btn-primary disabled">submit</button>*@
-                        
 
-                        <button type="button"  class="btn btn-primary" 
-                                ng-disabled="myForm.ProductName.$error.$invalid ||
-                                myForm.ProductAlias.$error.$invalid ||
-                                myForm.BirthDate.$error.$invalid||
-                                myForm.email.$error.$invalid ||
-                                myForm.marks.$error.$invalid ">
-                        
+
+                        <button type="button" class="btn btn-primary"
+                                ng-disabled="myForm.ProductName.$invalid ||
+                                myForm.ProductAlias.$invalid ||
+                                myForm.BirthDate.$invalid||
+                                myForm.email.$invalid ||
+                                myForm.marks.$invalid ">
+
                             submit
                         </button>
 
