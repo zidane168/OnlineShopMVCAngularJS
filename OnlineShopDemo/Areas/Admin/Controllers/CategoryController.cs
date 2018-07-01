@@ -16,10 +16,6 @@ namespace OnlineShopDemo.Areas.Admin.Controllers
         {
 
             return View();
-
-            //var category = new CaterogyModel();
-            //var model = category.GetAll();
-            //return View(model);
         }
 
         // GET: Admin/Category/Details/5
@@ -34,64 +30,8 @@ namespace OnlineShopDemo.Areas.Admin.Controllers
             return View();
         }
 
-        // POST: Admin/Category/Create
-        [HttpPost]
-        public ActionResult Create(FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add insert logic here
+        // insert, update, delete data
+  
 
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Admin/Category/Edit/5
-        public ActionResult Edit(int id)
-        {
-            return View();
-        }
-
-        // POST: Admin/Category/Edit/5
-        [HttpPost]
-        public ActionResult Edit(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add update logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
-
-        // GET: Admin/Category/Delete/5
-        public ActionResult Delete(int id)
-        {
-            return View();
-        }
-
-        // POST: Admin/Category/Delete/5
-        [HttpPost]
-        public ActionResult Delete(int id, FormCollection collection)
-        {
-            try
-            {
-                // TODO: Add delete logic here
-
-                return RedirectToAction("Index");
-            }
-            catch
-            {
-                return View();
-            }
-        }
     }
 }

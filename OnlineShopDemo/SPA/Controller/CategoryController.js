@@ -35,7 +35,10 @@ app.service('appService', function ($http) {
     }
 
     this.PostApiCall = function (controllerName, methodName, obj, callback) {
-        result = $http.post(window.location.hostname +  'api/' + controllerName + '/' + methodName, obj)
+
+        var url = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + '/api/' + controllerName + '/' + method
+
+        result = $http.post(url, obj)
             .success(function (data, status) {
                 var event = {
                     result: data,
@@ -56,10 +59,25 @@ app.service('appService', function ($http) {
     };
 });
 
-app.controller('CategoryController', function ($scope, appService) {
-    $scope.title = 'Hello mannnnnn ';   
+app.controller('CategoryController', function ($scope, appService, categoryService) {
 
-    // call API
+    $scope.showCategory = false;
+
+    $scope.openAddCategoryDialog = function () {
+        ClearFields();
+        $scope.showCategory = true; // ng-show: dialog len
+    }
+
+    $scope.ClearFields() = function () {
+        $scope.ProductName = "";
+        $scope.ProductAlias = "";
+        $scope.BirthDate = "";
+        $scope.Status = true;
+    }
+
+    
+    // --------------- call API ------------------
+    // Get All Category 
     function GetAllCategory() {
 
         
@@ -78,17 +96,28 @@ app.controller('CategoryController', function ($scope, appService) {
             }
         });
     }
-
     GetAllCategory();
+
+    // Add Category
+    function AddCategory() {
+        debugger;
+        var category = {
+            ProductName: $scope.ProductName,
+            ProductAlias: $scope.ProductAlias,
+            BirthDate: $scope.BirthDate,
+            Status: $scope.Status,
+        }
+
+
+        var result = categoryService.addCategory(category);
+        result.then(function (msg) {
+            GetAllCategory();
+
+            alert(msg.data);
+            $scope.showCategory = false;    // hidden add form, just show data
+        });
+
+    }
+
+
 });
-
-//var app = angular.module('myApp', []);
-
-//app.service('hexafy', function () {
-//    this.myFunc = function (x) {
-//        return x.toString(16);
-//    }
-//});
-//app.controller('myCtrl', function ($scope, hexafy) {
-//    $scope.hex = hexafy.myFunc(255);
-//});

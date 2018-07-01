@@ -22,5 +22,49 @@ namespace Models
             return lst;
 
         }
+        public Models.EF.Category getCaterogyWithParentID(string ParentID)
+        {
+            using (OnlineShopDbContext dataContext = new OnlineShopDbContext())
+            {
+                int parentID = Convert.ToInt32(ParentID);
+                var category = dataContext.Categories.Find(parentID);
+                return category;
+            }
+        }
+
+
+        public string AddCategory(Category category)
+        {
+            if (category == null)
+            {
+                return "Invalid Category";
+            }
+
+            using (OnlineShopDbContext dataContext = new OnlineShopDbContext())
+            {
+
+                dataContext.Categories.Add(category);
+                dataContext.SaveChanges();
+                return "Category Updated!";
+            }
+        }
+
+        public string DeleteCategory(Category category)
+        {
+            if (category == null)
+            {
+                return "Invalid Category";
+            }
+
+            using (OnlineShopDbContext dataContext = new OnlineShopDbContext())
+            {
+                int no = Convert.ToInt32(category.ID);
+                var lst = dataContext.Categories.Where(x => x.ID == no).FirstOrDefault();
+                dataContext.Categories.Remove(lst);
+                dataContext.SaveChanges();
+                return "Category Deleted";
+                
+            }
+        }
     }
 }
