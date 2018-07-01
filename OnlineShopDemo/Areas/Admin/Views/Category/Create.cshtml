@@ -32,10 +32,6 @@
 
                     <fieldset>
 
-
-
-
-
                         <!-- ProductName -->
                         <div ng-class="myForm.ProductName.$dirty && myForm.ProductName.$invalid ? 'form-group has-error' : 'form-group has-success'">
                             <label class="control-label" for="ProductName">Product Name: </label>
@@ -64,7 +60,7 @@
                             <input type="date" class="form-control" id="BirthDate" name="BirthDate" ng-model="BirthDate" required>
                         </div>
                         <p>
-                            <span style="color:red" ng-show="myForm.ProductAlias.$dirty && myForm.ProductAlias.$invalid">
+                            <span style="color:red" ng-show="myForm.BirthDate.$dirty && myForm.BirthDate.$invalid">
                                 <span ng-show="myForm.BirthDate.$error.required">Birth Date is required.</span>
                                 <span ng-show="myForm.BirthDate.$error.date">Not a Valid Date.</span>
                             </span>
@@ -91,14 +87,19 @@
                                 <span ng-show="myForm.marks.$error.max">Max Percentage is 100.</span>
                             </span>
                         </p>
+         
+                        @*<button type="button" class="btn btn-primary disabled">submit</button>*@
+                        
 
-
-
-                        <p>
-
-                            <div>
-                                <input class="btn" type="submit" value="submit" />
-                            </div>
+                        <button type="button"  class="btn btn-primary" 
+                                ng-disabled="myForm.ProductName.$error.$invalid ||
+                                myForm.ProductAlias.$error.$invalid ||
+                                myForm.BirthDate.$error.$invalid||
+                                myForm.email.$error.$invalid ||
+                                myForm.marks.$error.$invalid ">
+                        
+                            submit
+                        </button>
 
 
 
