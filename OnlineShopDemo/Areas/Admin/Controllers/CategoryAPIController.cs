@@ -14,5 +14,17 @@ namespace OnlineShopDemo.Areas.Admin.Controllers
             var category = new CaterogyModel();
             return category.GetAll();
         }
+
+
+        // Admin/Category/Category/AddCategory
+
+
+        [HttpPost()]
+        [ActionName("AddCategory")]
+        public string AddCategory(Category c)
+        {
+            var category = new CaterogyModel();
+            return category.AddCategory(c);
+        }
     }
 }

@@ -7,23 +7,25 @@ app.service('categoryService', function ($http) {
 
     // add category
     this.addCategory = function (category) {
-
+        debugger;
+        var data2 = JSON.stringify(category);
         var response = $http({
 
             method: 'post',
-            url: 'Category/AddCategory',
+            url: window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + '/api/CategoryAPI/AddCategory',           
             data: JSON.stringify(category),
             dataType : "json"
         });
 
         return response;
+        debugger;
     }
 
     // update
     this.updateCategory = function (category) {
         var response = $http({
             method: 'post',
-            url: 'Category/UpdateCategory',
+            url: window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + '/api/Category/UpdateCategory',
             data: JSON.stringify(category),
             dataType: "json"
 
@@ -36,7 +38,7 @@ app.service('categoryService', function ($http) {
     this.deleteCategory = function (id) {
         var response = $http({
             method: "post",
-            url: "Category/DeleteCategory",
+            url: window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + '/api/Category/DeleteCategory',
             params: {
                 parentID: JSON.stringify(id)
             }

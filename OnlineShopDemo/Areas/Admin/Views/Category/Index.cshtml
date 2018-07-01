@@ -76,9 +76,9 @@
         <!-- /.panel -->
     </div>
     <!-- /.col-lg-12 -->
-</div>
 
-<div class="row" ng-controller="CategoryController">
+
+
 
     <div class="col-lg-12">
         <div class="panel panel-default">
@@ -120,76 +120,68 @@
         <!-- /.panel -->
     </div>
     <!-- /.col-lg-6 -->
-</div>
-<!-- /.row -->
 
 
 
-<div ng-show="showCategory">
-    <!-- ProductName -->
-    <div ng-class="myForm.ProductName.$dirty && myForm.ProductName.$invalid ? 'form-group has-error' : 'form-group has-success'">
-        <label class="control-label" for="ProductName">
-            @Html.LabelFor(model => model.Name)
-        </label>
-        <input type="text" class="form-control" id="ProductName" name="ProductName" ng-model="ProductName" required>
-    </div>
-    <p>
-        @Html.ValidationMessageFor(model => model.Name, null)
-        <span style="color:red" ng-show="myForm.ProductName.$dirty && myForm.ProductName.$invalid">
-            <span ng-show="myForm.ProductName.$error.required">Product Name is required.</span>
-        </span>
-    </p>
 
-    <!-- ProductAlias -->
-    <div ng-class="myForm.ProductAlias.$dirty && myForm.ProductAlias.$invalid ? 'form-group has-error' : 'form-group has-success'">
-        <label class="control-label" for="ProductAlias">
-            @Html.LabelFor(model => model.Alias)
-        </label>
-        <input type="text" class="form-control" id="ProductAlias" name="ProductAlias" ng-model="ProductAlias" required>
-    </div>
-    <p>
-        <span style="color:red" ng-show="myForm.ProductAlias.$dirty && myForm.ProductAlias.$invalid">
-            <span ng-show="myForm.ProductAlias.$error.required">Product Alias is required.</span>
-        </span>
-    </p>
+    <div ng-show="showCategory">
+        <!-- ProductName -->
+        <div ng-class="myForm.ProductName.$dirty && myForm.ProductName.$invalid ? 'form-group has-error' : 'form-group has-success'">
+            <label class="control-label" for="ProductName"> Product Name:         </label>
+            <input type="text" class="form-control" id="ProductName" name="ProductName" ng-model="ProductName" required>
+        </div>
+        <p>
+            <span style="color:red" ng-show="myForm.ProductName.$dirty && myForm.ProductName.$invalid">
+                <span ng-show="myForm.ProductName.$error.required">Product Name is required.</span>
+            </span>
+        </p>
 
-    <!-- Birthday -->
-    <div ng-class="myForm.BirthDate.$dirty && myForm.BirthDate.$invalid ? 'form-group has-error' : 'form-group has-success'">
-        <label class="control-label" for="BirthDate">Product Alias: </label>
-        <input type="date" class="form-control" id="BirthDate" name="BirthDate" ng-model="BirthDate" required>
-    </div>
-    <p>
-        <span style="color:red" ng-show="myForm.BirthDate.$dirty && myForm.BirthDate.$invalid">
-            <span ng-show="myForm.BirthDate.$error.required">Birth Date is required.</span>
-            <span ng-show="myForm.BirthDate.$error.date">Not a Valid Date.</span>
-        </span>
-    </p>
+        <!-- ProductAlias -->
+        <div ng-class="myForm.ProductAlias.$dirty && myForm.ProductAlias.$invalid ? 'form-group has-error' : 'form-group has-success'">
+            <label class="control-label" for="ProductAlias"> Product Alias:        </label>
+            <input type="text" class="form-control" id="ProductAlias" name="ProductAlias" ng-model="ProductAlias" required>
+        </div>
+        <p>
+            <span style="color:red" ng-show="myForm.ProductAlias.$dirty && myForm.ProductAlias.$invalid">
+                <span ng-show="myForm.ProductAlias.$error.required">Product Alias is required.</span>
+            </span>
+        </p>
 
-    <!-- Status -->
-    <div class="form-group">
-        <label>Status</label>
-        <select class="form-control" ng-model="Status">
-            <option>True</option>
-            <option selected>False</option>
-        </select>
-    </div>
+        <!-- Birthday -->
+        <div ng-class="myForm.BirthDate.$dirty && myForm.BirthDate.$invalid ? 'form-group has-error' : 'form-group has-success'">
+            <label class="control-label" for="BirthDate">Product Alias: </label>
+            <input type="date" class="form-control" id="BirthDate" name="BirthDate" ng-model="BirthDate" required>
+        </div>
+        <p>
+            <span style="color:red" ng-show="myForm.BirthDate.$dirty && myForm.BirthDate.$invalid">
+                <span ng-show="myForm.BirthDate.$error.required">Birth Date is required.</span>
+                <span ng-show="myForm.BirthDate.$error.date">Not a Valid Date.</span>
+            </span>
+        </p>
+
+        <!-- Status -->
+        <div class="form-group">
+            <label>Status</label>
+            <select class="form-control" ng-model="Status">
+                <option>True</option>
+                <option selected>False</option>
+            </select>
+        </div>
 
 
 
-    <button type="button" class="btn btn-primary" ng-click="AddUpdateCategory()"
-            ng-disabled="myForm.ProductName.$invalid ||
+        <button type="button" class="btn btn-primary" ng-click="AddCategory()"
+                ng-disabled="myForm.ProductName.$invalid ||
                                 myForm.ProductAlias.$invalid ||
-                                myForm.BirthDate.$invalid||
-                                myForm.email.$invalid ||
-                                myForm.marks.$invalid ">
+                                myForm.BirthDate.$invalid ">
 
-        submit
-    </button>
+            submit
+        </button>
+
+    </div>
+
 
 </div>
-
-
-
 @section ClientScript
     {
     <!-- DataTables CSS -->

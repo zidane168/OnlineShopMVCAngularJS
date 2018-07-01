@@ -36,7 +36,7 @@ app.service('appService', function ($http) {
 
     this.PostApiCall = function (controllerName, methodName, obj, callback) {
 
-        var url = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + '/api/' + controllerName + '/' + method
+        var url = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port + '/api/' + controllerName + '/' + methodName
 
         result = $http.post(url, obj)
             .success(function (data, status) {
@@ -61,20 +61,23 @@ app.service('appService', function ($http) {
 
 app.controller('CategoryController', function ($scope, appService, categoryService) {
 
-    $scope.showCategory = false;
+    
+    $scope.showCategory = true;    
 
     $scope.openAddCategoryDialog = function () {
         ClearFields();
-        $scope.showCategory = true; // ng-show: dialog len
+        $scope.showCategory = !$scope.showCategory; // ng-show: dialog len
+
+        console.log("show category: " + $scope.showCategory);
     }
 
-    $scope.ClearFields() = function () {
+    // using functionnnnnnnn
+    function ClearFields() {
         $scope.ProductName = "";
         $scope.ProductAlias = "";
         $scope.BirthDate = "";
         $scope.Status = true;
     }
-
     
     // --------------- call API ------------------
     // Get All Category 
@@ -99,22 +102,34 @@ app.controller('CategoryController', function ($scope, appService, categoryServi
     GetAllCategory();
 
     // Add Category
-    function AddCategory() {
+    $scope.AddCategory = function() {
         debugger;
         var category = {
-            ProductName: $scope.ProductName,
-            ProductAlias: $scope.ProductAlias,
-            BirthDate: $scope.BirthDate,
+            Name: $scope.ProductName,
+            Alias: $scope.ProductAlias,
+            CreateDate: $scope.BirthDate,
             Status: $scope.Status,
         }
 
 
-        var result = categoryService.addCategory(category);
-        result.then(function (msg) {
-            GetAllCategory();
+        // var result = appService.PostApiCall(category);
 
-            alert(msg.data);
-            $scope.showCategory = false;    // hidden add form, just show data
+        // var result = appService.PostApiCall('CategoryAPI', 'AddCategory', function (event) {        
+
+        var result = categoryService.addCategory(category);
+        result.then(function(event) {
+
+            console.log("calling post api");
+            if (event.hasError == true) {
+                alert('Error Add Category: ' + event.error);
+            }
+            else {
+                GetAllCategory();               
+                $scope.showCategory = false;    // hidden add form, just show data
+            }
+
+            console.log("done already???");
+        
         });
 
     }
