@@ -327,6 +327,7 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="SPA\app.js" />
     <Content Include="SPA\Controller\CategoryController.js" />
     <Content Include="SPA\apiService.js" />
     <Content Include="SPA\Controller\CategoryValidateController.js" />

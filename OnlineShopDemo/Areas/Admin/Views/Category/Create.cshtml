@@ -10,34 +10,24 @@
     <fieldset>
         <legend>Validation Demo</legend>
 
-        @*<p>
-            Tên Sản Phẩm: <br>
-            <input type="number" name="ProductName" ng-model="ProductName" required>
-            <span style="color:red" ng-show="myForm.ProductName.$valid">
-                <span ng-show="myForm.ProductName.$error.required">ProductName is required.</span>                
-            </span>
-        </p>*@
-
         <p>
-            Student Roll Number:<br>
-            <input type="number" name="StudentRollNumber" ng-model="StudentRollNumber" required>
-            <span style="color:red" ng-show="myForm.StudentRollNumber.$dirty && myForm.StudentRollNumber.$invalid">
-                <span ng-show="myForm.StudentRollNumber.$error.required">Student Roll Number is required.</span>
-                <span ng-show="myForm.StudentRollNumber.$error.number">Not valid number!</span>
-            </span>
-        </p>
-
-
-        <p>
-            Student Name:<br>
-            <input type="text" name="Student" ng-model="Student" required>
-            <span style="color:red" ng-show="myForm.Student.$dirty && myForm.Student.$invalid">
-                <span ng-show="myForm.Student.$error.required">Student Name is required.</span>
+           Product Name:<br>
+            <input type="text" name="ProductName" ng-model="ProductName" required>
+            <span style="color:red" ng-show="myForm.ProductName.$dirty && myForm.ProductName.$invalid">
+                <span ng-show="myForm.ProductName.$error.required">Product Name is required.</span>
             </span>
         </p>
 
         <p>
-            Student Birth Date:<br>
+            Product Alias:<br>
+            <input type="text" name="ProductAlias" ng-model="ProductAlias" required>
+            <span style="color:red" ng-show="myForm.ProductAlias.$dirty && myForm.ProductAlias.$invalid">
+                <span ng-show="myForm.ProductAlias.$error.required">ProductAlias is required.</span>
+            </span>
+        </p>
+        
+        <p>
+            Create Date:<br>
             <input type="date" name="BirthDate" ng-model="BirthDate" required placeholder="yyyy-MM-dd">
             <span style="color:red" ng-show="myForm.BirthDate.$dirty && myForm.BirthDate.$invalid">
                 <span ng-show="myForm.BirthDate.$error.required">Student Birth Date is required.</span>
