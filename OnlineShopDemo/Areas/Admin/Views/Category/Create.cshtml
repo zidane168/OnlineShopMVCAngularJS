@@ -4,70 +4,108 @@
     Layout = "~/Areas/Admin/Views/Shared/_Layout.cshtml";
 }
 
-
-<form ng-controller="CategoryValidateController" name="myForm" novalidate style="width: 470px;margin: 0 auto;border:medium;margin-top:10%">
-
-    <fieldset>
-        <legend>Validation Demo</legend>
-
-        <p>
-           Product Name:<br>
-            <input type="text" name="ProductName" ng-model="ProductName" required>
-            <span style="color:red" ng-show="myForm.ProductName.$dirty && myForm.ProductName.$invalid">
-                <span ng-show="myForm.ProductName.$error.required">Product Name is required.</span>
-            </span>
-        </p>
-
-        <p>
-            Product Alias:<br>
-            <input type="text" name="ProductAlias" ng-model="ProductAlias" required>
-            <span style="color:red" ng-show="myForm.ProductAlias.$dirty && myForm.ProductAlias.$invalid">
-                <span ng-show="myForm.ProductAlias.$error.required">ProductAlias is required.</span>
-            </span>
-        </p>
-        
-        <p>
-            Create Date:<br>
-            <input type="date" name="BirthDate" ng-model="BirthDate" required placeholder="yyyy-MM-dd">
-            <span style="color:red" ng-show="myForm.BirthDate.$dirty && myForm.BirthDate.$invalid">
-                <span ng-show="myForm.BirthDate.$error.required">Student Birth Date is required.</span>
-                <span ng-show="myForm.BirthDate.$error.date">Not a Valid Date.</span>
-            </span>
-        </p>
+@*<form role="form">
+        <div class="form-group has-success">
+            <label class="control-label" for="inputSuccess">Input with success</label>
+            <input type="text" class="form-control" id="inputSuccess">
+        </div>
+        <div class="form-group has-warning">
+            <label class="control-label" for="inputWarning">Input with warning</label>
+            <input type="text" class="form-control" id="inputWarning">
+        </div>
+        <div class="form-group has-error">
+            <label class="control-label" for="inputError">Input with error</label>
+            <input type="text" class="form-control" id="inputError">
+        </div>
+    </form>*@
 
 
-
-        <p>
-            Student Email:<br>
-            <input type="email" name="email" ng-model="email" required>
-            <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
-                <span ng-show="myForm.email.$error.required">Email is required.</span>
-                <span ng-show="myForm.email.$error.email">Invalid email address.</span>
-            </span>
-        </p>
-
-
-
-        <p>
-            Student Percentage Marks:<br>
-            <input type="number" name="marks" ng-model="marks" max="100" required>
-            <span style="color:red" ng-show="myForm.marks.$dirty && myForm.marks.$invalid">
-                <span ng-show="myForm.marks.$error.required">Email is required.</span>
-                <span ng-show="myForm.marks.$error.number">Invalid number.</span>
-                <span ng-show="myForm.marks.$error.max">Max Percentage is 100.</span>
-            </span>
-        </p>
-
-
-
-        <p>
-
-            <div>
-                <input class="btn" type="submit" value="submit" />
+<div class="row">
+    <div class="col-lg-6">
+        <div class="panel panel-yellow">
+            <div class="panel-heading">
+                Validation Demo
             </div>
+            <div class="panel-body">
+
+                <form ng-controller="CategoryValidateController" name="myForm" novalidate style="width: 470px;margin: 0 auto;border:medium;margin-top:10%">
+
+                    <fieldset>
 
 
 
-    </fieldset>
-</form>
 
+
+                        <!-- ProductName -->
+                        <div ng-class="myForm.ProductName.$dirty && myForm.ProductName.$invalid ? 'form-group has-error' : 'form-group has-success'">
+                            <label class="control-label" for="ProductName">Product Name: </label>
+                            <input type="text" class="form-control" id="ProductName" name="ProductName" ng-model="ProductName" required>
+                        </div>
+                        <p>
+                            <span style="color:red" ng-show="myForm.ProductName.$dirty && myForm.ProductName.$invalid">
+                                <span ng-show="myForm.ProductName.$error.required">Product Name is required.</span>
+                            </span>
+                        </p>
+
+                        <!-- ProductAlias -->
+                        <div ng-class="myForm.ProductAlias.$dirty && myForm.ProductAlias.$invalid ? 'form-group has-error' : 'form-group has-success'">
+                            <label class="control-label" for="ProductAlias">Product Alias: </label>
+                            <input type="text" class="form-control" id="ProductAlias" name="ProductAlias" ng-model="ProductAlias" required>
+                        </div>
+                        <p>
+                            <span style="color:red" ng-show="myForm.ProductAlias.$dirty && myForm.ProductAlias.$invalid">
+                                <span ng-show="myForm.ProductAlias.$error.required">Product Alias is required.</span>
+                            </span>
+                        </p>
+
+                        <!-- Birthday -->
+                        <div ng-class="myForm.BirthDate.$dirty && myForm.BirthDate.$invalid ? 'form-group has-error' : 'form-group has-success'">
+                            <label class="control-label" for="BirthDate">Product Alias: </label>
+                            <input type="date" class="form-control" id="BirthDate" name="BirthDate" ng-model="BirthDate" required>
+                        </div>
+                        <p>
+                            <span style="color:red" ng-show="myForm.ProductAlias.$dirty && myForm.ProductAlias.$invalid">
+                                <span ng-show="myForm.BirthDate.$error.required">Birth Date is required.</span>
+                                <span ng-show="myForm.BirthDate.$error.date">Not a Valid Date.</span>
+                            </span>
+                        </p>
+
+
+                        <p>
+                            Student Email:<br>
+                            <input type="email" name="email" ng-model="email" required>
+                            <span style="color:red" ng-show="myForm.email.$dirty && myForm.email.$invalid">
+                                <span ng-show="myForm.email.$error.required">Email is required.</span>
+                                <span ng-show="myForm.email.$error.email">Invalid email address.</span>
+                            </span>
+                        </p>
+
+
+
+                        <p>
+                            Student Percentage Marks:<br>
+                            <input type="number" name="marks" ng-model="marks" max="100" required>
+                            <span style="color:red" ng-show="myForm.marks.$dirty && myForm.marks.$invalid">
+                                <span ng-show="myForm.marks.$error.required">Email is required.</span>
+                                <span ng-show="myForm.marks.$error.number">Invalid number.</span>
+                                <span ng-show="myForm.marks.$error.max">Max Percentage is 100.</span>
+                            </span>
+                        </p>
+
+
+
+                        <p>
+
+                            <div>
+                                <input class="btn" type="submit" value="submit" />
+                            </div>
+
+
+
+                    </fieldset>
+
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
