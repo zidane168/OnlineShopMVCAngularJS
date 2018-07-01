@@ -1,6 +1,4 @@
 ﻿
-var app = angular.module('app', []);
-
 app.service('appService', function ($http) {
     var result;
     this.GetApiCall = function (controllerName, method, callback) {
