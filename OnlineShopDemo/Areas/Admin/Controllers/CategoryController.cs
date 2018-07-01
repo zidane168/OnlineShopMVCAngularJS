@@ -6,6 +6,7 @@ using Models.EF;        // remmeber include here
 
 namespace OnlineShopDemo.Areas.Admin.Controllers
 {
+    [Authorize]             // dùng membership  -> tự động checklogin
     public class CategoryController : Controller
     {
       
