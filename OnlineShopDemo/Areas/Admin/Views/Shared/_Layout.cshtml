@@ -32,6 +32,22 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    
+
+    <!-- jQuery -->
+    <script src="~/Assets/admin/vendor/jquery/jquery.min.js"></script>
+    <!-- Bootstrap Core JavaScript -->
+    <script src="~/Assets/admin/vendor/bootstrap/js/bootstrap.min.js"></script>
+    <!-- Metis Menu Plugin JavaScript -->
+    <script src="~/Assets/admin/vendor/metisMenu/metisMenu.min.js"></script>
+    <!-- Morris Charts JavaScript -->
+    <script src="~/Assets/admin/vendor/raphael/raphael.min.js"></script>
+    <script src="~/Assets/admin/vendor/morrisjs/morris.min.js"></script>
+    <script src="~/Assets/admin/data/morris-data.js"></script>
+    <!-- Custom Theme JavaScript -->
+    <script src="~/Assets/admin/dist/js/sb-admin-2.js"></script>
+
+    @RenderSection("ClientScript", false)   <!-- false là section khong bắt buộc -->
 
 
     <!-- AngularJS 1.4.9 -->
@@ -294,7 +310,7 @@
     </div>
     <!-- /#wrapper -->
    
-    <!-- jQuery -->
+    @*<!-- jQuery -->
     <script src="~/Assets/admin/vendor/jquery/jquery.min.js"></script>
     <!-- Bootstrap Core JavaScript -->
     <script src="~/Assets/admin/vendor/bootstrap/js/bootstrap.min.js"></script>
@@ -305,9 +321,9 @@
     <script src="~/Assets/admin/vendor/morrisjs/morris.min.js"></script>
     <script src="~/Assets/admin/data/morris-data.js"></script>
     <!-- Custom Theme JavaScript -->
-    <script src="~/Assets/admin/dist/js/sb-admin-2.js"></script>
+    <script src="~/Assets/admin/dist/js/sb-admin-2.js"></script>*@
 
-    @RenderSection("ClientScript", false)   <!-- false là section khong bắt buộc -->
+   
 
 </body>
 </html>

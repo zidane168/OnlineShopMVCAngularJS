@@ -112,3 +112,30 @@
     <!-- /.col-lg-6 -->
 </div>
 <!-- /.row -->
+
+
+
+@section ClientScript
+{
+    <!-- DataTables CSS -->    
+    <link href="~/Assets/admin/vendor/datatables-plugins/dataTables.bootstrap.css" rel="stylesheet" />
+
+    <!-- DataTables Responsive CSS -->    
+    <link href="~/Assets/admin/vendor/datatables-responsive/dataTables.responsive.css" rel="stylesheet" />
+
+    <!-- DataTables JavaScript -->
+    <script src="~/Assets/admin/vendor/datatables/js/jquery.dataTables.min.js"></script>
+    <script src="~/Assets/admin/vendor/datatables-plugins/dataTables.bootstrap.min.js"></script>
+    <script src="~/Assets/admin/vendor/datatables-responsive/dataTables.responsive.js"></script>
+
+
+     <!-- Page-Level Demo Scripts - Tables - Use for reference -->
+    <script>
+        $(document).ready(function() {
+            $('#dataTables-example').DataTable({
+                responsive: true
+            });
+        });
+    </script>
+
+}
